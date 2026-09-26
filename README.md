@@ -18,7 +18,7 @@ That thinking process belongs in this repository too.
 
 ## Prototype
 
-The current working ten are in [QUESTIONS.md](QUESTIONS.md). Their wording and order are provisional.
+The current working ten are listed in [data/top-10.yml](data/top-10.yml). Their wording and order are provisional; each question's text and background live under [`data/questions/`](data/questions/).
 
 Before any of these questions can be used, some form of communication must already exist. We call that **Stage 0**. It matters, but it is not the main subject of this project. The mathematics, physics, linguistics, and engineering of establishing communication are better left to the relevant specialists.
 
@@ -36,7 +36,7 @@ The Ten Questions are a signboard, not the whole conversation.
 
 “Do you drink alcohol?” “When did you last fight?” “Do you ever think, ‘young people these days’?” Questions that look like detours may still reveal something about social structure, stress, recreation, technology, generations, conflict, or how conflict is avoided.
 
-Questions that do not make the current ten remain visible in [CANDIDATES.md](CANDIDATES.md). Why they were left out, and the arguments around them, may matter later — especially the ones that sound a little silly.
+Questions that do not make the current ten remain listed in [data/contenders.yml](data/contenders.yml). Why they were left out, and the arguments around them, may matter later — especially the ones that sound a little silly.
 
 ## How this project behaves
 

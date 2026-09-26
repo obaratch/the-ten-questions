@@ -1,0 +1,14 @@
+id: "014"
+text:
+  ja: "あなた（たち）にはインターネットがありますか。"
+  en: "Do you have an Internet?"
+themes:
+  - network
+  - communication
+  - social_structure
+rationale:
+  en: >-
+    Whether a persistent, civilization-scale network exists; whether it is centralized or a network of networks; and whether increased connectivity produced integration, fragmentation, new localities, or the disappearance of old ones.
+notes:
+  en: >-
+    Communication with us does not answer this. A counterpart may possess an excellent point-to-point channel without anything resembling a shared public network.

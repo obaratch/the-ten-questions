@@ -1,0 +1,11 @@
+id: "013"
+text:
+  ja: "最後に戦争をしたのはいつですか。"
+  en: "When was your last war?"
+themes:
+  - war
+  - conflict
+  - history
+rationale:
+  en: >-
+    Whether organized conflict between large social units exists or existed, what ended it, and whether peace is an equilibrium, a temporary condition, or a category that makes no sense to them.

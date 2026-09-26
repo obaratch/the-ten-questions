@@ -1,0 +1,11 @@
+id: "012"
+text:
+  ja: "大量破壊兵器を持っていますか。"
+  en: "Do you possess weapons of mass destruction?"
+themes:
+  - weapons
+  - existential_risk
+  - governance
+rationale:
+  en: >-
+    Whether technological capability has created civilization-scale self-destructive power, how that threshold was crossed, and what institutions or norms emerged in response. The concept of a weapon may itself fail to map cleanly.

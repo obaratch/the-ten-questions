@@ -1,0 +1,15 @@
+id: "016"
+text:
+  ja: "今いちばん必要なものは何ですか。そして、いちばん余っていて困っているものは何ですか。"
+  en: "What do you need most, and what do you have too much of?"
+themes:
+  - scarcity
+  - surplus
+  - exchange
+  - trade
+rationale:
+  en: >-
+    The counterpart's structure of scarcity and surplus. The answers need not be material: energy, computation, information, space, time, attention, population, entropy sinks, or categories we have not imagined may matter more.
+notes:
+  en: >-
+    If exchange is possible, this may also be the beginning of trade. If exchange is impossible, it is still a compact way to learn what constrains a civilization.

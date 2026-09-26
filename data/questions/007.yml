@@ -1,0 +1,10 @@
+id: "007"
+text:
+  ja: "あなたは、出来事に前と後があると認識しますか。"
+  en: "Do you distinguish before from after?"
+themes:
+  - time
+  - sequence
+rationale:
+  en: >-
+    Establish whether ordered events are a shared concept before relying on familiar notions of history, prediction, waiting, or sequence.

@@ -1,0 +1,10 @@
+id: "006"
+text:
+  ja: "この接触は、あなたの側で意図されたものですか。"
+  en: "Was this encounter intentional on your side?"
+themes:
+  - intention
+  - encounter
+rationale:
+  en: >-
+    Distinguish deliberate contact from accident, discovery, interception, observation, or coincidence without assuming which side travelled.

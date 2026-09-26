@@ -1,0 +1,11 @@
+id: "003"
+text:
+  ja: "あなたと同じような存在は、他にもいますか。"
+  en: "Are there others like you?"
+themes:
+  - peers
+  - plurality
+  - kind
+rationale:
+  en: >-
+    This begins to test whether anything resembling peers, a kind, a population, a species, or a civilization exists on the other side.
