@@ -1,59 +1,47 @@
 # The Ten Questions
 
-**Let’s think about ten questions for first contact.**
-
-[日本語](README.ja.md)
+**An open, multilingual attempt to prepare ten questions for a first encounter with non-Earth intelligence.**
 
 > Draft snapshot: 2026-09-27
 
-If we encounter an intelligence that is neither human nor a human-made AI, what should we ask first?
+[日本語](README.ja.md)
 
-Time may be short. We may not get another chance. And the person — or system — on the scene may not be the one who designed these questions, but simply an unfortunate and slightly impatient operator who has to follow a procedure from the top.
+What should be asked first if an intelligence originating beyond Earth — or beyond the assumptions by which we describe Earth — becomes able to converse with us?
 
-That is the idea behind **The Ten Questions** as a first-contact protocol. We may not get through all ten. So let’s ask the important things first.
+This project tries to keep the public answer deliberately small: **ten questions, in priority order**. The encounter may end after question 1. There may be time for only three. The list should remain useful when read by an operator who did not design it.
 
-Choosing ten questions requires thinking about far more than ten things. Does the other side distinguish self from other? Does individuality exist? Do individuals form groups? Do they recognize before and after, or cause and effect? Do they have anything like intention, conflict, networks, scarcity, generations, or entertainment? Do the concepts and languages that seem obvious to us overlap with theirs at all?
+The work behind that small list is intentionally larger. Questions about individuality, collectives, time, causality, intention, conflict, networks, scarcity, translation, and the assumptions hidden inside human language are all part of the record.
 
-That thinking process belongs in this repository too.
+## The prototype
 
-## Prototype
+The current working list is in [QUESTIONS.md](QUESTIONS.md). It is not a finished edition and is expected to change.
 
-The current working ten are in [QUESTIONS.md](QUESTIONS.md). Their wording and order are provisional.
-
-Before any of these questions can be used, some form of communication must already exist. We call that **Stage 0**. It matters, but it is not the main subject of this project. The mathematics, physics, linguistics, and engineering of establishing communication are better left to the relevant specialists.
+Communication itself is treated as **Stage 0**: before these questions can be useful, the participants must establish some minimally reliable way to distinguish and interpret responses. This project acknowledges that problem but does not attempt to solve the mathematics, physics, linguistics, or engineering of first-contact communication in full.
 
 ## Earth is plural
 
-This project has no single canonical language. Japanese and English are the initial working languages simply because they are available to the founder, but neither is treated as the original. They are parallel expressions of the same project.
+There is no canonical human language here. Japanese and English are the initial working languages, intended as parallel representations rather than an original and a translation. More languages, and disagreements exposed by translation, are welcome.
 
-Ambiguities and disagreements exposed by translation are not necessarily defects to be eliminated. They can reveal the plurality of cultures and languages on Earth. Reaching agreement matters; so does preserving meaningful difference.
-
-The future representative of Earth may not be human. It may be an AI, or some other kind of agent carrying Earth civilization forward. Likewise, the intelligence we meet may not be biological, individual, planetary, native to a home world, or even part of spacetime as we understand it.
+The future representative of Earth may not be human. The encountered intelligence may not be biological, individual, planetary, or native to our spacetime.
 
 ## More than ten
 
-The Ten Questions are a signboard, not the whole conversation.
-
-“Do you drink alcohol?” “When did you last fight?” “Do you ever think, ‘young people these days’?” Questions that look like detours may still reveal something about social structure, stress, recreation, technology, generations, conflict, or how conflict is avoided.
-
-Questions that do not make the current ten remain visible in [CANDIDATES.md](CANDIDATES.md). Why they were left out, and the arguments around them, may matter later — especially the ones that sound a little silly.
+Ten questions are the signboard, not the whole conversation. Interesting questions that do not currently make the ten remain visible in [CANDIDATES.md](CANDIDATES.md).
 
 ## How this project behaves
 
-We take contact seriously. We do not need to be solemn about ourselves.
+The project aims to be serious about contact without becoming solemn about itself. Humor, curiosity, and tolerance are not decorations: they may be useful probes into another society, and useful checks on our own assumptions.
 
-Humor, curiosity, and tolerance are not just there to make the atmosphere friendlier. A light question may reveal details that a grand one misses, and a little room for laughter may help us step outside our own assumptions.
-
-The ambition is deliberately large: **to move toward useful mutual understanding as quickly as possible under extreme uncertainty**.
+The underlying ambition is large even when the artifact is small: **to maximize useful mutual understanding under severe uncertainty**.
 
 See [MANIFESTO.md](MANIFESTO.md) for the working principles, [GOVERNANCE.md](GOVERNANCE.md) for stewardship, and [CONTRIBUTING.md](CONTRIBUTING.md) for participation.
 
 ## Snapshots, not completion
 
-This project has no final version. Dated snapshots preserve the judgment of a particular moment. Git commits provide exact provenance; dates provide a clue to what people on Earth were thinking at that time.
+This project does not aim at a final version. Dated snapshots may be published as historical milestones. Git commits provide exact provenance; dates provide human-readable historical context.
 
-Later, structured source data may be compiled into multilingual HTML and PDF editions so the discussion can also be read from beginning to end. We may also write fictional encounter scenarios to test the ten questions, but for now that remains a possible subproject. Imagination is welcome.
+Future rendered editions may be compiled to multilingual HTML and PDF from structured source data. Fictional encounter scenarios may eventually be used as stress tests, but are considered a possible subproject rather than the core artifact.
 
 ## License
 
-This project is intended for unrestricted reuse under **CC0 1.0 Universal**. See [LICENSE](LICENSE).
+The project is intended for unrestricted reuse under **CC0 1.0 Universal**. See [LICENSE](LICENSE).
