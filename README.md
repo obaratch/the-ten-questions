@@ -4,6 +4,8 @@
 
 > Draft snapshot: 2026-09-27
 
+[日本語](README.ja.md)
+
 What should be asked first if an intelligence originating beyond Earth — or beyond the assumptions by which we describe Earth — becomes able to converse with us?
 
 This project tries to keep the public answer deliberately small: **ten questions, in priority order**. The encounter may end after question 1. There may be time for only three. The list should remain useful when read by an operator who did not design it.
