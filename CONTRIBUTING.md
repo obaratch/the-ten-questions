@@ -2,7 +2,7 @@
 
 **The Ten Questions** welcomes ideas, disagreements, and counterproposals.
 
-[日本語](CONTRIBUTING.ja.md)
+[日本語](i18n/ja/CONTRIBUTING.md)
 
 If you think of a new question, doubt one of the current ten, or notice something shift when you translate it, bring that into the discussion. Adding candidates, removing them, and changing their order are all part of the project.
 
