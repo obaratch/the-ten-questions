@@ -4,7 +4,7 @@ This project is intended to remain open to argument while retaining enough edito
 
 ## Stewardship
 
-While the founding host actively maintains the project, the host acts as a benevolent editor with final responsibility for:
+While the founding host actively maintains the project, the host acts as **editor-in-chief** with final responsibility for:
 
 - project scope and coherence;
 - acceptance, rejection, and ordering of the ten questions;
@@ -23,7 +23,7 @@ Disagreement is not technical debt to be erased. Competing formulations, minorit
 
 The manifesto is revisable, but changes to it deserve a higher editorial threshold than ordinary wording changes because it defines the character and scope of the project.
 
-During the founding host's active stewardship, the host retains final editorial responsibility for manifesto changes.
+During the founding host's active stewardship, the editor-in-chief retains final editorial responsibility for manifesto changes.
 
 ## Succession
 
