@@ -4,10 +4,10 @@ Questions outside the current ten are not discarded. Some are too specific, too 
 
 The formulations below are deliberately loose. The interesting part is often the question behind the question.
 
-## Do you get drunk?
+## Do you drink alcohol?
 
-**あなた（たち）は酔いますか。**  
-**Do you get drunk?**
+**あなた（たち）はお酒を飲みますか。**  
+**Do you drink alcohol?**
 
 What we really want to know: whether discomfort, stress, boredom, ritual, pleasure, altered states, or social bonding are sometimes handled through temporary experience rather than permanent solutions. If something analogous exists, does it become recreation, ceremony, vice, medicine, or all of them?
 
