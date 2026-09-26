@@ -9,7 +9,7 @@ candidates:
     tone: playful
     themes: [recreation, altered_state, stress, ritual]
     text:
-      ja: "あなた（たち）は酔いますか。"
+      ja: "あなた（たち）はお酒を飲みますか。"
       en: "Do you get drunk?"
   - id: C002
     tone: serious
