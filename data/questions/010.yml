@@ -1,0 +1,10 @@
+id: "010"
+text:
+  ja: "私たちが今、あなたに尋ねるべき、もっと重要な質問がありますか。"
+  en: "Is there a more important question we should ask you now?"
+themes:
+  - blind_spots
+  - meta_question
+rationale:
+  en: >-
+    The list itself is a human artifact. This gives the other side an explicit opportunity to expose a blind spot in our framing.

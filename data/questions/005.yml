@@ -1,0 +1,10 @@
+id: "005"
+text:
+  ja: "あなたは、他の存在を代表して話していますか。"
+  en: "Are you communicating on behalf of others?"
+themes:
+  - representation
+  - collective
+rationale:
+  en: >-
+    The communicating entity and the community, network, institution, or collective behind it may not be the same thing.

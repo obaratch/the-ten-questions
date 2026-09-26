@@ -1,0 +1,14 @@
+id: "015"
+text:
+  ja: "「最近の若い者は」と思うことがありますか。"
+  en: "Do you ever think, “young people these days…”?"
+themes:
+  - generation
+  - culture
+  - succession
+rationale:
+  en: >-
+    Whether generations exist as social categories, whether culture changes across them, and whether transmission reliably creates friction between old and new participants.
+notes:
+  en: >-
+    This question requires something like age, succession, or generations to have been established first.

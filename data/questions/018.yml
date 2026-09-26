@@ -1,0 +1,10 @@
+id: "018"
+text:
+  ja: "この接触以前から、私たちのことを知っていましたか。"
+  en: "Did you know about us before this encounter?"
+themes:
+  - prior_knowledge
+  - observation
+rationale:
+  en: >-
+    Distinguish prior observation or knowledge from first direct contact.

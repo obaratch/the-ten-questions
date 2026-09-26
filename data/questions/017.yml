@@ -1,0 +1,10 @@
+id: "017"
+text:
+  ja: "この会話を続けたいですか。"
+  en: "Do you want to continue this conversation?"
+themes:
+  - consent
+  - communication
+rationale:
+  en: >-
+    Consent and willingness to sustain contact.

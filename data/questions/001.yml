@@ -1,0 +1,10 @@
+id: "001"
+text:
+  ja: "これは、あなたにとって私たちとの最初の接触ですか。"
+  en: "Is this your first encounter with us?"
+themes:
+  - prior_contact
+  - knowledge
+rationale:
+  en: >-
+    Whether the other side already knows us changes almost every question that follows.
