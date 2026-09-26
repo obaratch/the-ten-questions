@@ -48,6 +48,12 @@ The ambition is deliberately large: **to move toward useful mutual understanding
 
 See [MANIFESTO.md](MANIFESTO.md) for the working principles, [GOVERNANCE.md](GOVERNANCE.md) for stewardship, and [CONTRIBUTING.md](CONTRIBUTING.md) for participation.
 
+## Validate question data
+
+Install dependencies with `npm ci`, then run `npm test` to exercise the validator.
+Use `npm run validate:draft` while preparing a proposal; it permits question text in one language.
+Before merging, run `npm run validate:merge`; it also requires non-empty English and Japanese text.
+
 ## Snapshots, not completion
 
 This project has no final version. Dated snapshots preserve the judgment of a particular moment. Git commits provide exact provenance; dates provide a clue to what people on Earth were thinking at that time.
