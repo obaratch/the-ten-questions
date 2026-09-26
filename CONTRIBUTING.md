@@ -2,6 +2,8 @@
 
 The Ten Questions is meant to be argued with.
 
+[日本語](CONTRIBUTING.ja.md)
+
 Useful contributions include:
 
 - proposing a new question;
