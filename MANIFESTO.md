@@ -50,7 +50,7 @@ Understanding is reciprocal. We should ask not only what the other is, but how w
 
 Humor, curiosity, tolerance, and playfulness are welcome.
 
-A question such as “Do you drink alcohol?”, “Do you ever think ‘young people these days’?”, or “What do you have too much of?” may reveal details of social organization that a grand question about cosmology does not.
+A question such as “Do you get drunk?”, “Do you ever think ‘young people these days’?”, or “What do you have too much of?” may reveal details of social organization that a grand question about cosmology does not.
 
 A light question may expose stress, ritual, recreation, generational structure, scarcity, conflict, or something we did not know to ask about. A joke may also reveal where translation fails.
 
