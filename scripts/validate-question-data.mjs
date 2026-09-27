@@ -76,8 +76,7 @@ function validateQuestion(question, filename, mode, errors) {
       for (const [language, label] of [["en", "English"], ["ja", "Japanese"]]) {
         if (!nonEmptyString(question.text[language])) {
           errors.push(
-            `${filename}: ${label} text is missing.
-Expected a non-empty text.${language} before merge.`,
+            `${filename}: ${label} text is missing.\nExpected a non-empty text.${language} before merge.`,
           );
         }
       }
@@ -191,13 +190,31 @@ function readMode(args) {
   return args[modeIndex + 1];
 }
 
+function escapeWorkflowCommand(value) {
+  return value.replaceAll("%", "%25").replaceAll("\r", "%0D").replaceAll("\n", "%0A");
+}
+
+function emitGitHubAnnotation(error) {
+  const match = error.match(/^([^:\n]+(?:\/[^:\n]+)*\.ya?ml):\s*([\s\S]*)$/);
+  if (!match) {
+    console.error(`::error::${escapeWorkflowCommand(error)}`);
+    return;
+  }
+
+  const [, filename, message] = match;
+  console.error(`::error file=${filename}::${escapeWorkflowCommand(message)}`);
+}
+
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
     const mode = readMode(process.argv.slice(2));
     const { errors } = await validateRepository({ mode });
     if (errors.length > 0) {
       console.error(`Question data validation failed (${mode} mode):`);
-      for (const error of errors) console.error(`- ${error}`);
+      for (const error of errors) {
+        console.error(`- ${error}`);
+        if (process.env.GITHUB_ACTIONS === "true") emitGitHubAnnotation(error);
+      }
       process.exitCode = 1;
     } else {
       console.log(`Question data is valid (${mode} mode).`);
