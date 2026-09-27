@@ -1,0 +1,13 @@
+{
+  "name": "the-ten-questions",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate:draft": "node scripts/validate-question-data.mjs --mode draft",
+    "validate:merge": "node scripts/validate-question-data.mjs --mode merge"
+  },
+  "dependencies": {
+    "yaml": "^2.8.1"
+  }
+}
