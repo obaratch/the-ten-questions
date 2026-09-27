@@ -26,4 +26,25 @@ jobs:
       - name: Run validator tests
         run: npm test
       - name: Check merge readiness
-        run: npm run validate:merge
+        shell: bash
+        run: |
+          set +e
+          output=$(npm run --silent validate:merge 2>&1)
+          status=$?
+          printf '%s\n' "$output"
+
+          {
+            echo "## Question data validation"
+            echo
+            if [ "$status" -eq 0 ]; then
+              echo "Question data is ready to merge."
+            else
+              echo "The pull request is not ready to merge yet."
+              echo
+              echo '```text'
+              printf '%s\n' "$output"
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          exit "$status"
