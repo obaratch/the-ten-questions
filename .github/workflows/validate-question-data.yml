@@ -50,3 +50,9 @@ jobs:
           exit "$status"
       - name: Build publishable data
         run: npm run build
+      - name: Upload publishable data
+        uses: actions/upload-artifact@v4
+        with:
+          name: publishable-data
+          path: dist/
+          retention-days: 7
