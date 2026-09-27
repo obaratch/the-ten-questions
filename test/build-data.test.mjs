@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
@@ -11,8 +11,9 @@ async function write(root, relativePath, content) {
   await writeFile(fullPath, content, "utf8");
 }
 
-test("buildData writes a deterministic source-shaped dist/data.json", async () => {
+test("buildData writes a deterministic source-shaped dist/data.json", async (t) => {
   const root = await mkdtemp(path.join(os.tmpdir(), "ten-questions-build-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
 
   await write(root, "questions/Q-0002.yml", 'id: Q-0002\ntext:\n  en: Second\n  ja: 二番目\nthemes:\n  - test\n');
   await write(root, "questions/Q-0001.yml", 'id: Q-0001\ntext:\n  en: First\n  ja: 一番目\nthemes:\n  - test\n');
