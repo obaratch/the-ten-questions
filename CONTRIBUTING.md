@@ -30,6 +30,18 @@ You do not need to fill in every point. But “because it sounds interesting” 
 
 A question does not need to sound profound. Something as simple as “Do you drink alcohol?” may still connect to recreation, stress, ritual, dependence, altered states, or other useful lines of inquiry.
 
+## Question data and merge requirements
+
+Questions live in `questions/Q-0000.yml`-style files. Please keep the structure readable for people first; equivalent YAML formatting is welcome and no particular formatter is required.
+
+A proposal may begin with question text in only one language. This is enough to open a pull request and start discussion or ask others for help with translation.
+
+Before a question is merged into `main`, however, it must include both English and Japanese text (`text.en` and `text.ja`). This is a publication requirement, not a claim that either language is canonical. Contributors are encouraged to ask for translation help rather than delay a proposal until they can provide both languages themselves.
+
+Structural checks may also require question IDs, filenames, indexes, and other machine-readable fields to remain internally consistent. Validation should focus on whether the data is usable, not on enforcing one cosmetic YAML style.
+
+Generated publication output will eventually be written under `dist/`; that directory is build output and is not committed to the repository.
+
 ## Languages
 
 This project has no single canonical language.
