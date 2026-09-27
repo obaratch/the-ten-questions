@@ -48,3 +48,5 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
           exit "$status"
+      - name: Build publishable data
+        run: npm run build
