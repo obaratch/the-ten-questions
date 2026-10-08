@@ -136,8 +136,8 @@ h2 { margin-bottom: 1rem; font-size: 1.4rem; font-weight: 500; letter-spacing: -
 .participation-section a { color: var(--accent); }
 
 footer { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; padding-block: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.75rem; }
-.footer-note, .copyright { margin: 0; }
-.copyright { margin-left: auto; }
+.copyright { margin: 0; }
+footer .github-link { margin-left: auto; }
 .copyright-link { color: inherit; text-decoration: none; }
 
 @media (min-width: 70rem) {
@@ -175,9 +175,6 @@ footer { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; pa
   .question-number { font-size: 1.8rem; }
   .question-card > p { font-size: 1.2rem; }
   .rationale-content { padding: 1rem; }
-  .footer-note { flex-basis: 100%; }
-  .copyright { margin-left: 0; }
-  footer .github-link { margin-left: auto; }
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }

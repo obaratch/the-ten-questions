@@ -1,12 +1,11 @@
 ---
 import GitHubLink from "./GitHubLink.astro";
-import { translations, type Language } from "../i18n";
+import type { Language } from "../i18n";
 interface Props { lang: Language; }
 const { lang } = Astro.props;
 const copyrightYear = new Date().getFullYear();
 ---
 <footer>
-  <p class="footer-note">{translations[lang].footerNote}</p>
   <p class="copyright">© {copyrightYear} <a class="copyright-link" href="https://www.obalab.com/" target="_blank" rel="noopener noreferrer">Obalab</a></p>
   <GitHubLink lang={lang} />
 </footer>
