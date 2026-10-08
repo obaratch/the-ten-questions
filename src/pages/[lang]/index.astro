@@ -1,0 +1,28 @@
+---
+import QuestionCard from "../../components/QuestionCard.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { languages, translations, type Language } from "../../i18n";
+import data from "../../../dist/data.json";
+export function getStaticPaths() { return languages.map(lang => ({ params: { lang } })); }
+const lang = Astro.params.lang as Language;
+const t = translations[lang];
+---
+<SiteLayout title={`${t.brand} — ${t.releaseLabel}`} currentPage="questions" lang={lang}>
+  <div class="page-intro">
+    <p class="release-notice"><strong>{t.notice}</strong></p>
+    <h1>{t.brand}</h1>
+    <p class="intro">{t.intro}</p>
+    <nav aria-label={t.sections}>
+      <a href="#top-10">{t.top}</a>
+      <a href="#contenders">{t.contenders}</a>
+    </nav>
+  </div>
+  <section id="top-10" aria-labelledby="top-10-heading">
+    <h2 id="top-10-heading">{t.top}</h2>
+    <ol class="question-list">{data.top10.map((id, index) => <QuestionCard id={id} question={data.questions[id]} position={index} lang={lang} />)}</ol>
+  </section>
+  <section id="contenders" aria-labelledby="contenders-heading">
+    <h2 id="contenders-heading">{t.contenders}</h2>
+    <ol class="question-list">{data.contenders.map(id => <QuestionCard id={id} question={data.questions[id]} lang={lang} />)}</ol>
+  </section>
+</SiteLayout>

@@ -1,13 +1,27 @@
 ---
+import { translations, type Language } from "../i18n";
 interface Props {
+  lang: Language;
   id: string;
-  question: { text: { en: string; ja: string } };
+  question: { text: Partial<Record<Language, string>>; rationale?: Record<string, string> };
   position?: number;
 }
-const { id, question, position } = Astro.props;
+const { id, question, position, lang } = Astro.props;
+const text = question.text[lang];
+if (!text?.trim()) throw new Error(`Missing ${lang} translation for ${id}`);
+const t = translations[lang];
+const rationales = question.rationale ?? {};
+const rationaleLanguage = [lang, "en", ...Object.keys(rationales)].find(language => rationales[language]?.trim());
+const rationale = rationaleLanguage ? rationales[rationaleLanguage] : undefined;
 ---
 <li class="question-card" id={id}>
   <h3>{position !== undefined && <span class="question-number">{position + 1}</span>}<span>{id}</span></h3>
-  <p lang="en">{question.text.en}</p>
-  <p lang="ja">{question.text.ja}</p>
+  <p lang={lang}>{text}</p>
+  <details class="question-rationale">
+    <summary>{t.rationaleLabel}</summary>
+    <div class="rationale-content">
+      {rationale && rationaleLanguage !== lang && <p class="translation-notice">{t.untranslated}</p>}
+      {rationale ? <p class="rationale-text" lang={rationaleLanguage}>{rationale}</p> : <p>{t.noRationale}</p>}
+    </div>
+  </details>
 </li>
