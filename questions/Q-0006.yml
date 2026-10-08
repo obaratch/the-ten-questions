@@ -1,10 +1,11 @@
 id: Q-0006
 text:
-  ja: "この接触は、あなたの側で意図されたものですか。"
-  en: "Was this encounter intentional on your side?"
+  ja: "私たちに出会って、驚きましたか？"
+  en: "Were you surprised to meet us?"
 themes:
   - intention
   - encounter
+  - surprise
 rationale:
   en: >-
-    Distinguish deliberate contact from accident, discovery, interception, observation, or coincidence without assuming which side travelled.
+    Distinguish deliberate contact from accident, discovery, interception, observation, or coincidence without assuming which side travelled. The encounter might have been unexpected for both sides.
