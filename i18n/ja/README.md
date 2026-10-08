@@ -2,6 +2,8 @@
 
 **ファーストコンタクトに備えて10の質問を考えてみよう**
 
+**[現在のトップ10を見る](https://obaratch.github.io/the-ten-questions/)**
+
 [English](../../README.md)
 
 > ドラフト・スナップショット: 2026-09-27
