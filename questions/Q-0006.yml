@@ -7,5 +7,7 @@ themes:
   - encounter
   - surprise
 rationale:
+  ja: >-
+    どちらが移動してきたかを前提にせず、意図的な接触なのか、事故、発見、傍受、観察、偶然なのかを見分ける。出会いは双方にとって予想外だったかもしれない。
   en: >-
     Distinguish deliberate contact from accident, discovery, interception, observation, or coincidence without assuming which side travelled. The encounter might have been unexpected for both sides.

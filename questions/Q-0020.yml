@@ -7,5 +7,7 @@ themes:
   - interpretation
   - reciprocity
 rationale:
+  ja: >-
+    相手の側から私たちがどう見えているかを知る。私たち自身の自己認識に潜む前提が明らかになるかもしれないが、はい・いいえで答えられる質問から対話を始める段階には組み込みにくい。
   en: >-
     Learn how we appear from the other side. This may expose assumptions in our own self-description, but it is difficult to fit into a yes/no bootstrap.

@@ -6,5 +6,7 @@ themes:
   - blind_spots
   - meta_question
 rationale:
+  ja: >-
+    この質問リスト自体が人間の作ったものである。私たちの問いの立て方にある盲点を、相手が指摘できる機会を明示的に設ける。
   en: >-
     The list itself is a human artifact. This gives the other side an explicit opportunity to expose a blind spot in our framing.

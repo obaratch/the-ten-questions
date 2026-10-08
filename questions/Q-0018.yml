@@ -6,5 +6,7 @@ themes:
   - prior_knowledge
   - observation
 rationale:
+  ja: >-
+    直接の接触が初めてであることと、それ以前に観察したり知識を持っていたりすることを区別する。
   en: >-
     Distinguish prior observation or knowledge from first direct contact.

@@ -6,5 +6,7 @@ themes:
   - safety
   - next_action
 rationale:
+  ja: >-
+    行動、結果、禁止についての概念をどこまで共有しているかに大きく依存する、実用的な安全確認の質問である。
   en: >-
     A practical safety question that depends heavily on shared concepts of action, consequence, and prohibition.

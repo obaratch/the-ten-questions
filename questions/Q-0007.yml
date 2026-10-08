@@ -6,5 +6,7 @@ themes:
   - time
   - sequence
 rationale:
+  ja: >-
+    歴史、予測、待つこと、順序といった馴染みのある概念を使う前に、出来事に順序があるという考えを共有できるか確かめる。
   en: >-
     Establish whether ordered events are a shared concept before relying on familiar notions of history, prediction, waiting, or sequence.
