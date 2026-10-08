@@ -7,9 +7,15 @@
     "validate:draft": "node scripts/validate-question-data.mjs --mode draft",
     "validate:merge": "node scripts/validate-question-data.mjs --mode merge",
     "build": "npm run validate:merge && node scripts/build-data.mjs",
-    "build:site": "node scripts/build-site.mjs"
+    "build:site": "astro build",
+    "dev": "astro dev",
+    "preview": "astro preview"
   },
   "dependencies": {
     "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "astro": "^7.3.8",
+    "sass": "^1.105.1"
   }
 }

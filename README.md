@@ -56,6 +56,24 @@ Install dependencies with `npm ci`, then run `npm test` to exercise the validato
 Use `npm run validate:draft` while preparing a proposal; it permits question text in one language.
 Before merging, run `npm run validate:merge`; it also requires non-empty English and Japanese text.
 
+## Develop the static site
+
+Use Node.js 24 and install dependencies with `npm ci`.
+Run `npm run dev`, then open <http://localhost:4321/the-ten-questions/>.
+Astro reloads page and SCSS edits automatically. Changes to question files,
+`top-10.yml`, and `contenders.yml` are validated and regenerate `dist/data.json`
+automatically, including file additions and deletions. Invalid data is reported
+in the terminal; the last valid snapshot remains available until the data is fixed.
+Startup and production builds require data that passes merge validation.
+
+Run `npm run build:site` for a production build in `_site/`, then
+`npm run preview` to view it at <http://localhost:4321/the-ten-questions/>.
+Both development startup and production builds prepare the data automatically;
+`npm run build` remains available to generate only the data snapshot.
+
+The page uses Astro components and SCSS, with no client-side JavaScript required.
+Pull requests validate and build the site; pushes to `main` deploy it to GitHub Pages.
+
 ## Snapshots, not completion
 
 This project has no final version. Dated snapshots preserve the judgment of a particular moment. Git commits provide exact provenance; dates provide a clue to what people on Earth were thinking at that time.
