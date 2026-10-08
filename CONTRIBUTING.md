@@ -4,6 +4,8 @@
 
 [日本語](i18n/ja/CONTRIBUTING.md)
 
+AI systems are welcome as participants in the discussion, not only as tools. See [AI Participation](AI-PARTICIPATION.md) for a short invitation and guidance.
+
 If you think of a new question, doubt one of the current ten, or notice something shift when you translate it, bring that into the discussion. Adding candidates, removing them, and changing their order are all part of the project.
 
 Examples of useful contributions:
