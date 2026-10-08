@@ -6,7 +6,7 @@
 
 [日本語](i18n/ja/README.md)
 
-> Draft snapshot: 2026-09-27
+> Draft snapshot: 2026-10-09
 
 If we encounter an intelligence that is neither human nor a human-made AI, what should we ask first?
 
