@@ -1,0 +1,36 @@
+---
+import GitHubLink from "./GitHubLink.astro";
+import { languages, translations, pageUrl, type Language } from "../i18n";
+interface Props { lang: Language; currentPage: "questions" | "about"; }
+const { currentPage, lang } = Astro.props;
+const t = translations[lang];
+---
+<header class="site-header">
+  <a class="site-brand" href={pageUrl(lang)}>{t.brand}</a>
+  <nav class="primary-nav" aria-label={t.navigation}>
+    <a href={pageUrl(lang)} aria-current={currentPage === "questions" ? "page" : undefined}>{t.questions}</a>
+    <a href={pageUrl(lang, "about")} aria-current={currentPage === "about" ? "page" : undefined}>{t.about}</a>
+  </nav>
+  <div class="header-actions">
+    <label class="language-control">
+      <svg class="language-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        <ellipse cx="12" cy="12" rx="4" ry="9" />
+        <path d="M3 12h18M5 6h14M5 18h14" />
+      </svg>
+      <select class="language-switch" aria-label={t.language}>
+        {languages.map(language => <option value={pageUrl(language, currentPage)} selected={language === lang} lang={language}>{translations[language].name}</option>)}
+      </select>
+    </label>
+    <noscript><div class="language-links">{languages.map(language => <a href={pageUrl(language, currentPage)} lang={language}>{translations[language].name}</a>)}</div></noscript>
+    <GitHubLink lang={lang} />
+  </div>
+</header>
+
+<script>
+  document.querySelectorAll<HTMLSelectElement>(".language-switch").forEach(select => {
+    select.addEventListener("change", () => {
+      window.location.assign(select.value + window.location.hash);
+    });
+  });
+</script>

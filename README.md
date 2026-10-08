@@ -71,7 +71,13 @@ Run `npm run build` for a production build in `_site/`, then
 Both development startup and production builds validate the YAML sources and
 prepare `dist/data.json` automatically.
 
-The page uses Astro components and SCSS, with no client-side JavaScript required.
+The site builds separate English (`/en/`) and Japanese (`/ja/`) Questions and About pages.
+The root URL opens the English page. The header language dropdown keeps the current
+page and fragment when switching languages; direct language links are available
+when JavaScript is disabled. UI translations and supported languages live in
+`src/i18n/index.ts`. To add a language, add its UI translations there and the
+corresponding question text in the YAML sources.
+The pages use Astro components and SCSS; a small script handles the language dropdown.
 Pull requests validate and build the site; pushes to `main` deploy it to GitHub Pages.
 
 ## Snapshots, not completion

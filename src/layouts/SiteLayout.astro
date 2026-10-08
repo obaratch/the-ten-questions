@@ -1,0 +1,23 @@
+---
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles/site.scss";
+import { languages, translations, pageUrl, type Language } from "../i18n";
+interface Props { lang: Language; title: string; currentPage: "questions" | "about"; }
+const { title, currentPage, lang } = Astro.props;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content={translations[lang].description}>
+    <title>{title}</title>
+    {languages.map(language => <link rel="alternate" hreflang={language} href={new URL(pageUrl(language, currentPage), Astro.site)} />)}
+  </head>
+  <body>
+    <SiteHeader currentPage={currentPage} lang={lang} />
+    <main><slot /></main>
+    <SiteFooter lang={lang} />
+  </body>
+</html>
