@@ -6,17 +6,20 @@ const lang = Astro.params.lang as Language;
 const t = translations[lang];
 ---
 <SiteLayout title={`${t.about} — ${t.brand}`} currentPage="about" lang={lang}>
-  <div class="page-intro">
+  <div class="page-intro about-intro">
+    <p class="eyebrow">{t.eyebrow}</p>
     <h1>{t.aboutTitle}</h1>
     <p class="intro">{t.aboutIntro}</p>
   </div>
-  {t.aboutSections.map(section => <section aria-labelledby={`${section.id}-heading`}>
-    <h2 id={`${section.id}-heading`}>{section.title}</h2>
+  {t.aboutSections.map((section, index) => <section class="about-section" aria-labelledby={`${section.id}-heading`}>
+    <div class="section-heading"><span class="section-index" aria-hidden="true">0{index + 1}</span><h2 id={`${section.id}-heading`}>{section.title}</h2></div>
     <p>{section.text}</p>
   </section>)}
-  <section aria-labelledby="participation-heading">
-    <h2 id="participation-heading">{t.participationTitle}</h2>
+  <section class="about-section participation-section" aria-labelledby="participation-heading">
+    <div class="section-heading"><span class="section-index" aria-hidden="true">↗</span><h2 id="participation-heading">{t.participationTitle}</h2></div>
+    <div>
     <p>{t.participationText}</p>
     <p><a href={t.participationUrl}>{t.participationLink}</a></p>
+    </div>
   </section>
 </SiteLayout>

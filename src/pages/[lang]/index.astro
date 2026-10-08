@@ -8,21 +8,38 @@ const lang = Astro.params.lang as Language;
 const t = translations[lang];
 ---
 <SiteLayout title={`${t.brand} — ${t.releaseLabel}`} currentPage="questions" lang={lang}>
-  <div class="page-intro">
-    <p class="release-notice"><strong>{t.notice}</strong></p>
-    <h1>{t.brand}</h1>
+  <div class="page-intro questions-intro">
+    <div class="hero-copy">
+    <p class="eyebrow">{t.eyebrow}</p>
+    <h1>{t.brand}<span class="title-period" aria-hidden="true">.</span></h1>
     <p class="intro">{t.intro}</p>
-    <nav aria-label={t.sections}>
-      <a href="#top-10">{t.top}</a>
-      <a href="#contenders">{t.contenders}</a>
+    <nav class="section-nav" aria-label={t.sections}>
+      <a href="#top-10">{t.top}<span aria-hidden="true"> ↘</span></a>
+      <a href="#contenders">{t.contenders}<span aria-hidden="true"> ↘</span></a>
     </nav>
+    </div>
+    <div class="contact-diagram" aria-hidden="true">
+      <svg viewBox="0 0 360 360" fill="none">
+        <circle cx="180" cy="180" r="144" />
+        <circle cx="180" cy="180" r="105" />
+        <circle cx="180" cy="180" r="65" />
+        <path d="M180 12v336M12 180h336M78 78l204 204M78 282L282 78" class="diagram-axis" />
+        <ellipse cx="180" cy="180" rx="144" ry="52" transform="rotate(-35 180 180)" />
+        <circle cx="180" cy="180" r="8" class="diagram-earth" />
+        <circle cx="299" cy="99" r="7" class="diagram-contact" />
+        <path d="M299 79v-8m0 48v8m-20-28h-8m48 0h8" class="diagram-signal" />
+        <text x="194" y="202">01</text><text x="275" y="62">?</text>
+      </svg>
+      <span class="diagram-caption">EARTH ↗ UNKNOWN</span>
+    </div>
   </div>
+  <p class="release-notice"><span class="status-dot" aria-hidden="true"></span>{t.notice}</p>
   <section id="top-10" aria-labelledby="top-10-heading">
-    <h2 id="top-10-heading">{t.top}</h2>
+    <div class="section-heading"><span class="section-index" aria-hidden="true">01 / 10</span><h2 id="top-10-heading">{t.top}</h2><p>{t.topDescription}</p></div>
     <ol class="question-list">{data.top10.map((id, index) => <QuestionCard id={id} question={data.questions[id]} position={index} lang={lang} />)}</ol>
   </section>
   <section id="contenders" aria-labelledby="contenders-heading">
-    <h2 id="contenders-heading">{t.contenders}</h2>
+    <div class="section-heading"><span class="section-index" aria-hidden="true">10 +</span><h2 id="contenders-heading">{t.contenders}</h2><p>{t.contendersDescription}</p></div>
     <ol class="question-list">{data.contenders.map(id => <QuestionCard id={id} question={data.questions[id]} lang={lang} />)}</ol>
   </section>
 </SiteLayout>

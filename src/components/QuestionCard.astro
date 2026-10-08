@@ -15,7 +15,7 @@ const rationaleLanguage = [lang, "en", ...Object.keys(rationales)].find(language
 const rationale = rationaleLanguage ? rationales[rationaleLanguage] : undefined;
 ---
 <li class="question-card" id={id}>
-  <h3>{position !== undefined && <span class="question-number">{position + 1}</span>}<span>{id}</span></h3>
+  <h3>{position !== undefined && <span class="question-number">{String(position + 1).padStart(2, "0")}</span>}<span class="question-id">{id}</span></h3>
   <p lang={lang}>{text}</p>
   <details class="question-rationale">
     <summary>{t.rationaleLabel}</summary>
