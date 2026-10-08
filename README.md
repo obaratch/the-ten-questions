@@ -2,6 +2,8 @@
 
 **Let’s think about ten questions for first contact.**
 
+**[Explore the current Top 10 Questions](https://obaratch.github.io/the-ten-questions/)**
+
 [日本語](i18n/ja/README.md)
 
 > Draft snapshot: 2026-09-27
