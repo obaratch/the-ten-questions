@@ -1,0 +1,11 @@
+id: Q-0025
+text:
+  ja: "退屈することはありますか？"
+  en: "Do you ever get bored?"
+themes:
+  - boredom
+  - motivation
+  - experience
+rationale:
+  en: >-
+    Whether an intelligence can experience an absence of stimulation or meaningful activity, and how it responds when its own state becomes unsatisfying.

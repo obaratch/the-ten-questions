@@ -1,0 +1,11 @@
+id: Q-0022
+text:
+  ja: "名前はありますか？"
+  en: "Do you have a name?"
+themes:
+  - identity
+  - naming
+  - social_structure
+rationale:
+  en: >-
+    An ordinary way to begin getting acquainted that also asks whether entities are identified, named by others, or understood as distinct selves. A name might refer to a person, a collective, or something unlike either.

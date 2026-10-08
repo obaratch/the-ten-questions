@@ -95,13 +95,20 @@ test("reports missing references and duplicate membership within or across index
   assert.match(errors, /Q-0999 is referenced by an index but has no matching question file/);
 });
 
-test("reports wrong top-10 count and orphan questions", async (t) => {
+test("reports wrong top-10 count while allowing unlisted questions", async (t) => {
   const root = await createRepository(t);
   await replaceFile(root, "top-10.yml", stringify(["Q-0001"]));
   await replaceFile(root, "contenders.yml", stringify([]));
   const errors = (await validateRepository({ root, mode: "draft" })).errors.join(" | ");
   assert.match(errors, /top-10\.yml: Expected exactly 10 question IDs, found 1/);
-  assert.match(errors, /Question Q-0002 is not listed in top-10\.yml or contenders\.yml/);
+  assert.doesNotMatch(errors, /not listed in top-10/);
+});
+
+test("accepts unlisted question files in draft and merge modes", async (t) => {
+  const root = await createRepository(t);
+  await replaceFile(root, "contenders.yml", stringify([]));
+  assert.deepEqual((await validateRepository({ root, mode: "draft" })).errors, []);
+  assert.deepEqual((await validateRepository({ root, mode: "merge" })).errors, []);
 });
 
 test("checks text and themes while accepting equivalent YAML scalar styles", async (t) => {

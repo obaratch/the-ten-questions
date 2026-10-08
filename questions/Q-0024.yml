@@ -1,0 +1,11 @@
+id: Q-0024
+text:
+  ja: "嘘をつきますか？"
+  en: "Do you lie?"
+themes:
+  - deception
+  - trust
+  - social_structure
+rationale:
+  en: >-
+    Whether intentional deception is possible or practiced, and what this implies about cooperation and trust. The answer is playfully self-undermining: a denial cannot settle whether the counterpart lies.

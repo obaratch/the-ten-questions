@@ -1,0 +1,11 @@
+id: Q-0026
+text:
+  ja: "笑うことはありますか？"
+  en: "Do you ever laugh?"
+themes:
+  - humor
+  - expression
+  - social_structure
+rationale:
+  en: >-
+    Whether something resembling laughter, humor, or a shared response to incongruity exists, and whether it serves a social or private function.
