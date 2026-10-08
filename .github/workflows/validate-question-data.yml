@@ -1,4 +1,4 @@
-name: Question data validation
+name: Test and build
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validate question data
+    name: Test and build
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -23,32 +23,9 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Run validator tests
+      - name: Run data and static site tests
         run: npm test
-      - name: Check merge readiness
-        shell: bash
-        run: |
-          set +e
-          output=$(npm run --silent validate:merge 2>&1)
-          status=$?
-          printf '%s\n' "$output"
-
-          {
-            echo "## Question data validation"
-            echo
-            if [ "$status" -eq 0 ]; then
-              echo "Question data is ready to merge."
-            else
-              echo "The pull request is not ready to merge yet."
-              echo
-              echo '```text'
-              printf '%s\n' "$output"
-              echo '```'
-            fi
-          } >> "$GITHUB_STEP_SUMMARY"
-
-          exit "$status"
-      - name: Build publishable data
+      - name: Validate data and build static site
         run: npm run build
       - name: Upload publishable data
         uses: actions/upload-artifact@v4
@@ -56,8 +33,6 @@ jobs:
           name: publishable-data
           path: dist/
           retention-days: 7
-      - name: Build static site
-        run: npm run build:site
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:

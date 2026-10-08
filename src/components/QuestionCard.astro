@@ -1,0 +1,13 @@
+---
+interface Props {
+  id: string;
+  question: { text: { en: string; ja: string } };
+  position?: number;
+}
+const { id, question, position } = Astro.props;
+---
+<li class="question-card" id={id}>
+  <h3>{position !== undefined && <span class="question-number">{position + 1}</span>}<span>{id}</span></h3>
+  <p lang="en">{question.text.en}</p>
+  <p lang="ja">{question.text.ja}</p>
+</li>
