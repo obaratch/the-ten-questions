@@ -1,6 +1,6 @@
 id: Q-0011
 text:
-  ja: "あなた（たち）はお酒を飲みますか。"
+  ja: "あなた(たち)はお酒を飲みますか。"
   en: "Do you drink alcohol?"
 themes:
   - recreation
@@ -8,5 +8,7 @@ themes:
   - stress
   - ritual
 rationale:
+  ja: >-
+    何らかの知性であれば現実と理想のギャップから来るストレスや不安があると想像するが、それらを解消するために、恒久的な解決策ではなく、一時的な体験を通じて対処することがあるかを問う。またそれが娯楽・快楽として積極的に求められるものなのか、あるいはやや否定的な意味合いを持つ悪習として行われるものなのか、あるいは儀式や医療のような社会的に認められた行為なのかを問う。
   en: >-
     Whether discomfort, stress, boredom, ritual, pleasure, altered states, or social bonding are sometimes handled through temporary experience rather than permanent solutions. If something analogous exists, does it become recreation, ceremony, vice, medicine, or all of them?

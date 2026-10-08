@@ -5,5 +5,7 @@ text:
 themes:
   - causality
 rationale:
+  ja: >-
+    時間的な順序と因果関係は同じではない。因果関係について共通の理解があるかどうかは、説明、予測、責任、合意に関わる。
   en: >-
     Temporal order and causality are not the same. Shared causal reasoning matters for explanation, prediction, responsibility, and agreements.
