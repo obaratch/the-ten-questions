@@ -43,9 +43,10 @@ test("Astro builds separate localized pages with language navigation and Pages a
     assert.ok(!localized.includes(`<p lang="${language === "en" ? "ja" : "en"}">`));
     assert.equal((localized.match(/<details class="question-rationale">/g) || []).length, ids.length);
     assert.doesNotMatch(localized, /<details[^>]*\bopen\b/);
-    if (language === "ja") {
-      assert.ok(localized.includes("未翻訳"));
-      assert.ok(localized.includes(`<p class="rationale-text" lang="en">${escape(data.questions[ids[0]].rationale.en)}</p>`));
+    for (const id of ids) {
+      const card = localized.match(new RegExp(`<li class="question-card" id="${id}"[\\s\\S]*?</li>`))[0];
+      assert.ok(card.includes(`<p class="rationale-text" lang="${language}">${escape(data.questions[id].rationale[language])}</p>`));
+      assert.ok(!card.includes("未翻訳"));
     }
     for (const page of ["", "about/"]) {
       const content = await readFile(path.join(directory, `_site/${language}/${page}index.html`), "utf8");
