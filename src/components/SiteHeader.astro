@@ -6,7 +6,7 @@ const { currentPage, lang } = Astro.props;
 const t = translations[lang];
 ---
 <header class="site-header">
-  <a class="site-brand" href={pageUrl(lang)}>{t.brand}</a>
+  <a class="site-brand" href={pageUrl(lang)}><span class="brand-mark" aria-hidden="true">✳</span>{t.brand}</a>
   <nav class="primary-nav" aria-label={t.navigation}>
     <a href={pageUrl(lang)} aria-current={currentPage === "questions" ? "page" : undefined}>{t.questions}</a>
     <a href={pageUrl(lang, "about")} aria-current={currentPage === "about" ? "page" : undefined}>{t.about}</a>
