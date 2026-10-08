@@ -12,6 +12,10 @@ const t = translations[lang];
     <a href={pageUrl(lang, "about")} aria-current={currentPage === "about" ? "page" : undefined}>{t.about}</a>
   </nav>
   <div class="header-actions">
+    <button class="theme-switch" type="button" hidden aria-label={t.switchToDark} data-light-label={t.switchToLight} data-dark-label={t.switchToDark}>
+      <svg class="theme-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 14a8.5 8.5 0 0 1-10.5-10.5A8.5 8.5 0 1 0 20.5 14Z" /></svg>
+      <svg class="theme-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" /></svg>
+    </button>
     <label class="language-control">
       <svg class="language-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
         <circle cx="12" cy="12" r="9" />
@@ -28,6 +32,35 @@ const t = translations[lang];
 </header>
 
 <script>
+  const themeSwitch = document.querySelector<HTMLButtonElement>(".theme-switch");
+  if (themeSwitch) {
+    const storageKey = "ten-questions-theme";
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference: string | null = null;
+    try { preference = localStorage.getItem(storageKey); } catch {}
+    const applyTheme = () => {
+      const theme = preference === "light" || preference === "dark"
+        ? preference : systemTheme.matches ? "dark" : "light";
+      document.documentElement.dataset.theme = theme;
+      const label = theme === "dark" ? themeSwitch.dataset.lightLabel! : themeSwitch.dataset.darkLabel!;
+      themeSwitch.setAttribute("aria-label", label);
+      themeSwitch.title = label;
+    };
+    applyTheme();
+    themeSwitch.hidden = false;
+    themeSwitch.addEventListener("click", () => {
+      preference = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      try { localStorage.setItem(storageKey, preference); } catch {}
+      applyTheme();
+    });
+    systemTheme.addEventListener("change", applyTheme);
+    window.addEventListener("storage", event => {
+      if (event.key === storageKey || event.key === null) {
+        try { preference = localStorage.getItem(storageKey); } catch { preference = null; }
+        applyTheme();
+      }
+    });
+  }
   document.querySelectorAll<HTMLSelectElement>(".language-switch").forEach(select => {
     select.addEventListener("change", () => {
       window.location.assign(select.value + window.location.hash);

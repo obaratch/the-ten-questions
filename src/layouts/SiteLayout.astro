@@ -11,6 +11,16 @@ const { title, currentPage, lang } = Astro.props;
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script is:inline>
+      // Apply the saved preference before the first paint.
+      (() => {
+        let theme;
+        try { theme = localStorage.getItem("ten-questions-theme"); } catch {}
+        document.documentElement.dataset.theme = theme === "light" || theme === "dark"
+          ? theme
+          : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      })();
+    </script>
     <meta name="description" content={translations[lang].description}>
     <title>{title}</title>
     {languages.map(language => <link rel="alternate" hreflang={language} href={new URL(pageUrl(language, currentPage), Astro.site)} />)}

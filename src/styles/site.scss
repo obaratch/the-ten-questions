@@ -5,11 +5,40 @@
   --muted: #656b60;
   --line: #d5d7cb;
   --accent: #ad442c;
+  --on-accent: #f5f2e9;
+  --surface: #eeeee3;
+  --hover: #e9e7dc;
+  --selection: #e4cebb;
+  --orbit: #a9ae9b;
+  --axis: #c7cbbd;
+  --number: #858c7a;
+  --rationale-border: #bdc0ae;
   font-family: "Avenir Next", "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
   color: var(--ink);
   background: var(--paper);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+}
+
+@mixin dark-theme {
+  color-scheme: dark;
+  --paper: #1c2421;
+  --ink: #ecebdf;
+  --muted: #b1b6aa;
+  --line: #3e4941;
+  --accent: #ed987c;
+  --on-accent: #1c2421;
+  --surface: #26302a;
+  --hover: #303a33;
+  --selection: #674c3e;
+  --orbit: #75816e;
+  --axis: #465347;
+  --number: #a0ad96;
+  --rationale-border: #65715e;
+}
+:root[data-theme="dark"] { @include dark-theme; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) { @include dark-theme; }
 }
 
 * { box-sizing: border-box; }
@@ -20,8 +49,8 @@ main { flex: 1; }
 h1, h2, h3, p { margin-top: 0; }
 a { color: inherit; text-underline-offset: 0.25em; }
 a:hover { color: var(--accent); }
-a:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
-::selection { background: #e4cebb; color: var(--ink); }
+a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+::selection { background: var(--selection); color: var(--ink); }
 
 .site-header {
   display: flex;
@@ -44,7 +73,12 @@ nav { display: flex; flex-wrap: wrap; }
 .language-switch { max-width: 9rem; padding: 0.5rem 0.25rem; border: 0; border-radius: 0; color: var(--ink); background: transparent; font: inherit; cursor: pointer; }
 .github-link { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; color: var(--muted); }
 .github-link svg { width: 20px; height: 20px; }
-.github-link:hover { background: #e9e7dc; color: var(--accent); }
+.github-link:hover { background: var(--hover); color: var(--accent); }
+.theme-switch { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 2.75rem; height: 2.75rem; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; }
+.theme-switch[hidden] { display: none; }
+.theme-switch:hover { background: var(--hover); color: var(--accent); }
+.theme-sun, :root[data-theme="dark"] .theme-moon { display: none; }
+:root[data-theme="dark"] .theme-sun { display: block; }
 
 .page-intro { padding-block: 5rem 4rem; }
 .questions-intro { display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; gap: 3rem; }
@@ -58,10 +92,10 @@ html[lang="ja"] .about-intro h1 { max-width: none; font-size: clamp(2rem, 4vw, 3
 .section-nav { gap: 1rem; }
 .section-nav a { display: inline-flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 2.9rem; padding: 0.6rem 1.1rem; border: 1px solid var(--ink); text-decoration: none; font-size: 0.85rem; }
 .section-nav a:first-child { color: var(--paper); background: var(--ink); }
-.section-nav a:hover { border-color: var(--accent); color: var(--paper); background: var(--accent); }
+.section-nav a:hover { border-color: var(--accent); color: var(--on-accent); background: var(--accent); }
 .contact-diagram { width: 100%; max-width: 23rem; justify-self: end; text-align: center; }
-.contact-diagram svg { display: block; width: 100%; stroke: #a9ae9b; stroke-width: 0.8; }
-.contact-diagram .diagram-axis { stroke: #c7cbbd; stroke-dasharray: 3 6; }
+.contact-diagram svg { display: block; width: 100%; stroke: var(--orbit); stroke-width: 0.8; }
+.contact-diagram .diagram-axis { stroke: var(--axis); stroke-dasharray: 3 6; }
 .contact-diagram .diagram-earth { fill: var(--ink); stroke: var(--ink); }
 .contact-diagram .diagram-contact { fill: var(--accent); stroke: var(--accent); }
 .contact-diagram .diagram-signal { stroke: var(--accent); }
@@ -82,14 +116,14 @@ h2 { margin-bottom: 1rem; font-size: 1.4rem; font-weight: 500; letter-spacing: -
 .question-card:first-child { padding-top: 0; border-top: 0; }
 .question-card h3 { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.65rem; font-weight: 400; }
 .question-id { color: var(--muted); font-size: 0.65rem; letter-spacing: 0.05em; }
-.question-number { position: absolute; left: 0; top: 1.6rem; font-family: "Iowan Old Style", "Palatino Linotype", serif; color: #858c7a; font-size: 2.2rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.question-number { position: absolute; left: 0; top: 1.6rem; font-family: "Iowan Old Style", "Palatino Linotype", serif; color: var(--number); font-size: 2.2rem; line-height: 1; font-variant-numeric: tabular-nums; }
 .question-card:first-child .question-number { top: 0; }
 .question-card > p { margin-bottom: 1rem; font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; line-height: 1.6; letter-spacing: -0.025em; }
 .question-rationale { color: var(--muted); font-size: 0.85rem; }
 .question-rationale summary { width: fit-content; cursor: pointer; -webkit-user-select: none; user-select: none; font-size: 0.75rem; }
 .question-rationale summary::marker { color: var(--accent); }
 .question-rationale summary:hover { color: var(--accent); }
-.rationale-content { margin-top: 1rem; padding: 1.25rem 1.5rem; border-left: 2px solid #bdc0ae; background: #eeeee3; }
+.rationale-content { margin-top: 1rem; padding: 1.25rem 1.5rem; border-left: 2px solid var(--rationale-border); background: var(--surface); }
 .rationale-content p:last-child { margin-bottom: 0; }
 .rationale-text { white-space: pre-line; }
 .translation-notice { color: var(--accent); font-size: 0.75rem; }
@@ -119,8 +153,8 @@ footer { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; pa
   .site-header, main, footer { width: calc(100% - 2.5rem); }
   .site-header { padding-block: 1rem; gap: 0.75rem 1rem; }
   .site-brand { flex-basis: 100%; }
-  .primary-nav { gap: 1.25rem; }
-  .header-actions { gap: 0.5rem; }
+  .primary-nav { gap: 0.75rem; font-size: 0.8rem; }
+  .header-actions { gap: 0.25rem; }
   .page-intro { padding-block: 3rem 2.5rem; }
   .questions-intro { position: relative; display: block; }
   .hero-copy { position: relative; z-index: 1; }
