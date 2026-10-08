@@ -66,10 +66,10 @@ automatically, including file additions and deletions. Invalid data is reported
 in the terminal; the last valid snapshot remains available until the data is fixed.
 Startup and production builds require data that passes merge validation.
 
-Run `npm run build:site` for a production build in `_site/`, then
+Run `npm run build` for a production build in `_site/`, then
 `npm run preview` to view it at <http://localhost:4321/the-ten-questions/>.
-Both development startup and production builds prepare the data automatically;
-`npm run build` remains available to generate only the data snapshot.
+Both development startup and production builds validate the YAML sources and
+prepare `dist/data.json` automatically.
 
 The page uses Astro components and SCSS, with no client-side JavaScript required.
 Pull requests validate and build the site; pushes to `main` deploy it to GitHub Pages.

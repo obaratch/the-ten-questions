@@ -6,8 +6,7 @@
     "test": "node --test",
     "validate:draft": "node scripts/validate-question-data.mjs --mode draft",
     "validate:merge": "node scripts/validate-question-data.mjs --mode merge",
-    "build": "npm run validate:merge && node scripts/build-data.mjs",
-    "build:site": "astro build",
+    "build": "astro build",
     "dev": "astro dev",
     "preview": "astro preview"
   },
