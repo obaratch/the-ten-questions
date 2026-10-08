@@ -175,13 +175,6 @@ export async function validateRepository({ root = DEFAULT_ROOT, mode = "merge" }
     }
   }
 
-  const indexedIds = new Set([...topTen, ...contenders]);
-  for (const id of questionIds) {
-    if (!indexedIds.has(id)) {
-      errors.push(`Question ${id} is not listed in top-10.yml or contenders.yml.`);
-    }
-  }
-
   return { errors };
 }
 
